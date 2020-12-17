@@ -40,7 +40,7 @@ select:hover {
 /* main */
 main {
   height: calc(100vh - 80px);
-  padding: 80px;
+  padding: 40px;
   background-color: #1f3460;
   /* flex */
   display: flex;
@@ -48,8 +48,8 @@ main {
   justify-content: center;
   align-items: center;
 }
-.disco {
-  margin: 10px;
+.disc {
+  margin: 20px 10px;
   padding-top: 10px;
   height: 260px;
   width: 200px;
@@ -63,7 +63,7 @@ main {
   justify-content: space-around;
   align-items: center;
 }
-.disco:hover {
+.disc:hover {
   cursor: pointer;
   transform: scale(1.05);
   transition: 0.2s;
@@ -75,7 +75,7 @@ main {
 h2 {
   font-size: 20px;
 }
-p {
+div.disc p:nth-of-type(2) {
   margin-bottom: 10px;
   font-size: 16px;
   opacity: 0.6;
