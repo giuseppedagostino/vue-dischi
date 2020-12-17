@@ -39,7 +39,8 @@
       <!-- main -->
       <main>
         <div class="disc" v-for="(disc) in discs">
-          <img class="card" src="{{ disc.poster }}" alt="copertina">
+          <!-- l'url dell'immagine, perchè funzioni, va inserito senza parentesi graffe poichè sono già in una direttiva Vue -->
+          <img class="card" :src="disc.poster" :alt="disc.title">
           <h2>{{ disc.title }}</h2>
           <p>{{ disc.author }}</p>
           <p>{{ disc.year }}</p>
