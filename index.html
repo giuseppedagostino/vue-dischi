@@ -24,14 +24,10 @@
 
         <!-- parte destra -->
         <div>
-          <label for="">
-            <select class="" name="">
-              <option value="">Seleziona genere</option>
-              <option value="">pippo</option>
-              <option value="">pluto</option>
-              <option value="">paperino</option>
-            </select>
-          </label>
+          <select>
+            <option>Tutti i generi</option>
+            <option v-for="(disc) in discs">{{ disc.genre }}</option>
+          </select>
         </div>
       </header>
       <!-- fine header -->
