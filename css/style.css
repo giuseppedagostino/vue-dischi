@@ -3,7 +3,64 @@
   margin: 0;
   padding: 0;
 }
-body {
-  padding: 50px;
-  background-color: brown;
+
+/* header */
+header {
+  padding: 20px;
+  height: 80px;
+  background-color: royalblue;
+}
+header > i {
+  font-size: 40px;
+  color: white;
+}
+header div {
+  height: 100%;
+  float: right;
+  /* border: 2px solid white; */
+  /* flex */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+select {
+  width: 400px;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: #1f3460;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+select:hover {
+  cursor: pointer;
+}
+
+/* main */
+main {
+  height: calc(100vh - 80px);
+  padding: 80px;
+  background-color: #1f3460;
+}
+.disco {
+  height: 220px;
+  width: 180px;
+  background-color: royalblue;
+  border: 2px solid white;
+  border-radius: 20px;
+  /* flex */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.disco:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+.card {
+  width: 90%;
+  height: 50%;
+  border: 1px solid red;
 }
