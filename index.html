@@ -38,11 +38,11 @@
 
       <!-- main -->
       <main>
-        <div class="disc">
-          <img class="card" src="daily_1.jpg" alt="copertina">
-          <h2>titolo</h2>
-          <p>artista</p>
-          <p>anno</p>
+        <div class="disc" v-for="(disc) in discs">
+          <img class="card" src="{{ disc.poster }}" alt="copertina">
+          <h2>{{ disc.title }}</h2>
+          <p>{{ disc.author }}</p>
+          <p>{{ disc.year }}</p>
         </div>
       </main>
       <!-- fine main -->
