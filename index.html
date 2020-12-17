@@ -26,7 +26,7 @@
         <div>
           <label for="">
             <select class="" name="">
-              <option value="">ciao</option>
+              <option value="">Seleziona genere</option>
               <option value="">pippo</option>
               <option value="">pluto</option>
               <option value="">paperino</option>
@@ -40,10 +40,12 @@
       <main>
         <div class="disc" v-for="(disc) in discs">
           <!-- l'url dell'immagine, perchè funzioni, va inserito senza parentesi graffe poichè sono già in una direttiva Vue -->
-          <img class="card" :src="disc.poster" :alt="disc.title">
+          <img :src="disc.poster" :alt="disc.title">
           <h2>{{ disc.title }}</h2>
-          <p>{{ disc.author }}</p>
-          <p>{{ disc.year }}</p>
+          <div>
+            <p>{{ disc.author }}</p>
+            <p>{{ disc.year }}</p>
+          </div>
         </div>
       </main>
       <!-- fine main -->
