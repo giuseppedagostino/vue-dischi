@@ -24,9 +24,9 @@
 
         <!-- parte destra -->
         <div>
-          <select>
-            <option>Tutti i generi</option>
-            <option v-for="(genre) in genres">{{ genre }}</option>
+          <select name="genre" v-model="selectedValue">
+            <option value="">Tutti i generi</option>
+            <option :value="genre" v-for="(genre) in genres">{{ genre }}</option>
           </select>
         </div>
       </header>
@@ -34,7 +34,8 @@
 
       <!-- main -->
       <main>
-        <div class="disc" v-for="(disc) in discs">
+        <div class="disc" v-for="(disc) in discs"
+        v-if="disc.genre == selectedValue || selectedValue == '' ">
           <!-- l'url dell'immagine, perchè funzioni, va inserito senza parentesi graffe poichè sono già in una direttiva Vue -->
           <img :src="disc.poster" :alt="disc.title">
           <h2>{{ disc.title }}</h2>

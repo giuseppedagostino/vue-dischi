@@ -1,11 +1,13 @@
-// BONUS 1
-// Creare una select con tutti i generi dei dischi. In base a cosa scegliamo nella select, vedremo i corrispondenti cd.
+// BONUS 2
+// Ordinare i dischi per anno di uscita.
 
 var app = new Vue ({
   el: "#root",
   data: {
     // array di dischi inizialmente vuoto
     discs: [],
+    // valore della select
+    selectedValue: "",
     // creo un array per i generi musicali
     genres: [],
   },
@@ -16,6 +18,7 @@ var app = new Vue ({
       const genres = this.genres;
       for (var i = 0; i < albums.length; i++) {
         const album = albums[i];
+        // devo pushare quando non lo trova ecco perchè il punto esclamativo davanti
         if (!genres.includes(album.genre)) {
           genres.push(album.genre);
         }
